@@ -61,7 +61,7 @@ public class ContaBancaria {
 		System.out.println("Crie sua conta bancária!");
 		System.out.println("Digite o número da sua conta: ");
 		int numeroconta = scanner.nextInt();
-		if(numeroconta > 99999) {
+		if (numeroconta > 99999) {
 			System.out.println("Número de conta inválida!");
 			System.exit(0);
 		}
@@ -118,10 +118,8 @@ public class ContaBancaria {
 				break;
 			default:
 				System.out.println("Opção inválida. Tente novamente.");
+			scanner.close();
 			}
-
-			
 		}
 	}
-
 }
