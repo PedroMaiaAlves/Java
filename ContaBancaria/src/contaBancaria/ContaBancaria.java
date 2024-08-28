@@ -31,8 +31,7 @@ public class ContaBancaria {
 		if (saldo >= 0) {
 			saldo += valorDeposito;
 		} else if (saldo < 0) {
-			// saldo - 100 deposito 100
-			valorDeposito += saldo * 0.03;
+			valorDeposito += saldo * 1.03;
 			saldo = valorDeposito;
 		}
 
@@ -95,7 +94,6 @@ public class ContaBancaria {
 			case 1:
 				System.out.println("Seu saldo é: " + conta1.getSaldo());
 				break;
-
 			case 2:
 				System.out.println("Seu limite é: " + conta1.getLimite());
 				break;
@@ -105,14 +103,12 @@ public class ContaBancaria {
 				conta1.deposito(valorDeposito);
 				System.out.println("Depósito realizado com sucesso! Novo saldo: " + conta1.getSaldo());
 				break;
-
 			case 4:
 				System.out.println("Digite o valor a ser sacado: ");
 				double valorSaque = scanner.nextDouble();
 				conta1.saque(valorSaque);
 				System.out.println("Saque realizado! Novo saldo: " + conta1.getSaldo());
 				break;
-
 			case 5:
 				System.out.println("Saindo do sistema. Obrigado por usar o nosso banco!");
 				break;
